@@ -1,0 +1,28 @@
+[2017-02-13 15:30:34] [INFO] ====================================UI测试开始====================================
+[2017-02-13 15:30:34] [INFO] 当前操作系统是:[Windows 7]
+[2017-02-13 15:30:34] [INFO] 启动测试浏览器：[ie]
+[2017-02-13 15:30:36] [INFO] 最大化浏览器:ie
+[2017-02-13 15:30:36] [INFO] 设置异步脚本的超时时间为:30秒
+[2017-02-13 15:30:52] [INFO] 打开测试页面:[http://www.kaike.la]
+[2017-02-13 15:30:52] [INFO] login模块Login功能001_LoginSuccessFunction用例的UI测试开始
+[2017-02-13 15:30:53] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第1行步骤...
+[2017-02-13 15:30:53] [INFO] 正在执行数据初始化、数据销毁操作。。。。。。。
+[2017-02-13 15:30:53] [INFO] 正在执行sql:delete from T_SEND_SMS_LOG where MOBILE_NO = '13393766766'
+[2017-02-13 15:30:53] [INFO] 正在执行sql:delete from T_SEND_SMS_LOG where MOBILE_NO = '15870018757'
+[2017-02-13 15:30:53] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第2行步骤...
+[2017-02-13 15:30:53] [INFO] 获取网页标题，标题内容为：开课啦-互联网名师辅导，助力中考高效提分！
+[2017-02-13 15:30:53] [ERROR] 期望的结果为 [开课啦（浙江站）-互联网名师辅导，助力中考高效提分！] 但是找到了 [开课啦-互联网名师辅导，助力中考高效提分！]
+[2017-02-13 15:30:53] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第3行步骤...
+[2017-02-13 15:30:53] [INFO] 对【By.cssSelector: .Bn.btnLogin】对象进行点击操作
+[2017-02-13 15:30:54] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第4行步骤...
+[2017-02-13 15:30:54] [INFO] 正在输入：[happy01] 到 [By.xpath: //label[1]/input]
+[2017-02-13 15:30:54] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第5行步骤...
+[2017-02-13 15:30:54] [INFO] 正在输入：[123456] 到 [By.xpath: //label[2]/input]
+[2017-02-13 15:30:55] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第6行步骤...
+[2017-02-13 15:30:55] [INFO] 对【By.xpath: //button[contains(text(), '立即登录')]】对象进行点击操作
+[2017-02-13 15:30:55] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第7行步骤...
+[2017-02-13 15:31:05] [INFO] 暂停:10秒
+[2017-02-13 15:31:05] [INFO] 正在解析执行login模块的excel:[Login.xlsx]中的sheet(用例)：[001_LoginSuccessFunction]的第8行步骤...
+[2017-02-13 15:31:05] [INFO] 退出WebDriver实例
+[2017-02-13 15:31:06] [INFO] login模块Login功能001_LoginSuccessFunction用例的UI测试完毕
+[2017-02-13 15:31:06] [INFO] ====================================UI测试完毕====================================

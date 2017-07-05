@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+	<test name="demo">
+		<classes>
+			<class
+				name="com.mistong.testcases.login.Login_001_LoginSuccessFunction_Test" />
+		</classes>
+	</test>	
+</suite>
+ 

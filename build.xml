@@ -1,0 +1,42 @@
+<project basedir="." default="regression" name="automation test">
+	<!-- 变量设置 -->
+	<property name="base.dir" value="." />
+	<property name="testng.output.dir" value="${base.dir}/test-output" />
+	<property name="lib.dir" value="${base.dir}/lib" />
+	<property name="testng.file" value="testng.xml" />
+
+	<!-- testng任务 -->
+	<taskdef resource="testngtasks" classpath="${lib.dir}/testng-6.9.10.jar" />
+
+	<!-- 引用包设置 -->
+	<path id="classes">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement location="${base.dir}/bin" />
+	</path>
+
+	<!-- 每次构建清空之前构建文件 -->
+	<target name="clean">
+		<delete dir="${base.dir}/test-output" />
+		<delete dir="${base.dir}/bin" />
+	</target>
+
+	<!-- 编译文件 -->
+	<target name="compile" depends="clean">
+		<mkdir dir="${base.dir}/bin" />
+		<mkdir dir="${base.dir}/test-output" />
+		<javac srcdir="${base.dir}/src" destdir="${base.dir}/bin"
+			encoding="UTF-8" classpathref="classes" includeantruntime="off"
+			debug="on" debuglevel="lines,vars,source" />
+	</target>
+
+	<!-- 运行指定的xml -->
+	<target name="regression" depends="compile">
+		<testng outputdir="${testng.output.dir}" classpathref="classes"
+			delegateCommandSystemProperties="true">
+			<sysproperty key="file.encoding" value="UTF-8" />
+			<xmlfileset dir="${base.dir}/src" includes="${testng.file}" />
+		</testng>
+	</target>
+</project>
